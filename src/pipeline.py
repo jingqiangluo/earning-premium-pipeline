@@ -60,6 +60,9 @@ def main() -> None:
     print(f"done: {len(ok)} ok, {len(bad)} failed")
     if bad:
         print("failed:", ", ".join(bad))
+        for r in records:
+            if r["error"]:
+                print(f'  {r["ticker"]}: {r["error"]}')
     if not ok:
         # Total ingestion failure: fail the run loudly instead of committing
         # an all-error snapshot (the "Commit fresh data" step is skipped).

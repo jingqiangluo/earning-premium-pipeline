@@ -7,7 +7,7 @@ on:
   workflow_dispatch:  # manual trigger from the Actions tab
   push:  # TEMPORARY: verify end-to-end on first push; removed after green run
     branches: [main]
-    paths: ['.github/workflows/daily.yml']
+    paths: ['.github/workflows/daily.yml', 'src/**', 'requirements.txt']
 
 # The "Commit fresh data" step pushes back to the repo, so the token needs write.
 # Deps are pinned in requirements.txt (yfinance==1.7.0: option_chain API).
