@@ -60,6 +60,11 @@ def main() -> None:
     print(f"done: {len(ok)} ok, {len(bad)} failed")
     if bad:
         print("failed:", ", ".join(bad))
+    if not ok:
+        # Total ingestion failure: fail the run loudly instead of committing
+        # an all-error snapshot (the "Commit fresh data" step is skipped).
+        print("FATAL: all tickers failed, refusing to publish empty data")
+        sys.exit(1)
     for r in sorted(ok, key=lambda r: (r.get("richness") or 0), reverse=True)[:8]:
         print(f'  {r["ticker"]:5s} rich={r["richness"]} '
               f'impl={r["implied_move_pct"]}% rv={r["realized_move_pct"]}% '

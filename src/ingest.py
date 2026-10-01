@@ -15,7 +15,8 @@ import yfinance as yf
 def get_spot(ticker: str) -> float:
     t = yf.Ticker(ticker)
     try:
-        px = (t.fast_info or {}).get("last_price")
+        # yfinance>=1.0: fast_info is a FastInfo object (not a dict)
+        px = t.fast_info.last_price
         if px:
             return float(px)
     except Exception:
@@ -73,7 +74,10 @@ def choose_expiry(ticker: str, earnings_date: dt.date | None) -> str:
 
 def get_chain(ticker: str, expiry: str):
     """Return (calls, puts) DataFrames with bid/ask NaNs zeroed."""
-    calls, puts = yf.Ticker(ticker).option_chain(expiry)
+    # yfinance>=1.7 returns Options(calls, puts, underlying); older returned (calls, puts)
+    chain = yf.Ticker(ticker).option_chain(expiry)
+    calls = getattr(chain, "calls", chain[0])
+    puts = getattr(chain, "puts", chain[1])
     for df in (calls, puts):
         for col in ("bid", "ask"):
             if col in df.columns:

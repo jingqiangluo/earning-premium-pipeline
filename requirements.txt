@@ -1,4 +1,4 @@
-yfinance>=0.2.40
+yfinance==1.7.0  # pinned: 1.7 changed option_chain() to return (calls, puts, underlying)
 pandas>=2.0
 numpy>=1.24
 streamlit>=1.32
