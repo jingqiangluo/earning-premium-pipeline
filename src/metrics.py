@@ -67,8 +67,11 @@ def realized_move_pct(closes: list[float], dte: int,
     """
     if len(closes) < lookback + 1 or dte <= 0:
         return None
-    rets = np.log(np.array(closes[-(lookback + 1):]) /
-                  np.array(closes[-(lookback + 2):-1]))
+    # Exactly lookback+1 closes -> lookback log returns. (The old slicing
+    # broke when len(closes) == lookback+1: closes[-32:-1] silently clamped
+    # to 30 elements while closes[-31:] had 31.)
+    window = closes[-(lookback + 1):]
+    rets = np.log(np.array(window[1:]) / np.array(window[:-1]))
     daily_std = float(np.std(rets, ddof=1))
     return round(daily_std * math.sqrt(dte) * 100, 2)
 
