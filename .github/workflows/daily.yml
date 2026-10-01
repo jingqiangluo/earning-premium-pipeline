@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "20 20 * * 1-5"
   workflow_dispatch:  # manual trigger from the Actions tab
+  push:  # TEMPORARY: verify end-to-end on first push; removed after green run
+    branches: [main]
+    paths: ['.github/workflows/daily.yml']
 
 # The "Commit fresh data" step pushes back to the repo, so the token needs write.
 permissions:
