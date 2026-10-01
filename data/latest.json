@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-10-01T16:42:27.057725+00:00",
+  "records": [
+    {
+      "ticker": "CRWV",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "VST",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "APP",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "DDOG",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "ON",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "UMAC",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "INTC",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "MU",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "AMD",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "TEM",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "HOOD",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "BE",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "OKLO",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "DELL",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "SPY",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    },
+    {
+      "ticker": "CRCL",
+      "as_of": "2026-10-01",
+      "error": "ValueError: too many values to unpack (expected 2)"
+    }
+  ]
+}
