@@ -10,6 +10,7 @@ on:
     paths: ['.github/workflows/daily.yml']
 
 # The "Commit fresh data" step pushes back to the repo, so the token needs write.
+# Deps are pinned in requirements.txt (yfinance==1.7.0: option_chain API).
 permissions:
   contents: write
 
